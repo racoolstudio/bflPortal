@@ -1,0 +1,13 @@
+{% extends 'base.html'%}
+{%block title%}Production Page{%endblock%}
+{%block content%}
+{% include "navbar.html" with production_active=True %}
+<center>
+    <h1>Production Page</h1>
+</center>
+<ul>
+{% for product in productions%}
+    <li>Produced {{product.total}} {{product.liters}}L on {{product.production_date}}</li>
+{%endfor%}
+</ul>
+{%endblock%}

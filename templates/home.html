@@ -1,0 +1,8 @@
+{% extends 'base.html'%}
+{%block title%}Home Page{%endblock%}
+{%block content%}
+ {% include "navbar.html" with home_active=True %}
+<center>
+    <h1>Hello {{request.user}} 👋🏻</h1>
+</center>
+{%endblock%}
